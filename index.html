@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100e16">
+  <title>ANIMEBASKET — Anime Library</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#" aria-label="ANIMEBASKET home"><span>◈</span> ANIMEBASKET</a>
+    <nav>
+      <button class="nav-button active" data-page="library">▣ Library</button>
+      <button class="nav-button" data-page="genres">▦ Genres</button>
+      <button class="nav-button" data-page="stats">▥ Stats</button>
+    </nav>
+    <button class="search-button" id="searchButton" aria-label="Search">⌕</button>
+  </header>
+
+  <main class="container">
+    <section id="libraryPage">
+      <div class="hero">
+        <div>
+          <p class="eyebrow">YOUR PERSONAL ANIME ARCHIVE</p>
+          <h1><span id="animeCount">0</span> ANIME WATCHED</h1>
+          <h2><span id="episodeCount">0</span> EPISODES</h2>
+          <p class="hero-copy">Different worlds. Same great feeling.</p>
+          <button class="primary-button" id="addAnimeButton">＋ Mark as watched</button>
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <div class="filters" id="filters"></div>
+        <input class="search-input" id="searchInput" placeholder="Search anime…" hidden>
+        <label class="sort-label">
+          Sort
+          <select id="sortSelect">
+            <option value="recent">Recently added</option>
+            <option value="az">Title A–Z</option>
+            <option value="rating">Top rated</option>
+          </select>
+        </label>
+      </div>
+      <div id="shelves"></div>
+    </section>
+
+    <section id="genresPage" class="page" hidden>
+      <div class="page-heading">
+        <h1>Explore <span>genres</span></h1>
+        <p>Find your next obsession.</p>
+      </div>
+      <div class="genre-grid" id="genreGrid"></div>
+    </section>
+
+    <section id="statsPage" class="page" hidden>
+      <div class="page-heading">
+        <h1>Your <span>stats</span></h1>
+        <p>A look back at your anime journey.</p>
+      </div>
+      <div class="stats-grid" id="statsGrid"></div>
+    </section>
+
+    <section id="detailPage" class="page" hidden>
+      <button class="back-button" id="backButton">← Back to library</button>
+      <div id="detailContent"></div>
+    </section>
+
+    <footer>Made for the stories that stay with you. <span>◈ ANIMEBASKET</span></footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
